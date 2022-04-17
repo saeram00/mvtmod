@@ -1,4 +1,14 @@
 {% extends "home/base.html" %}
-{% block content %}
-  <h1>Test template</h1>
-{% endblock content %}
+{% block body %}
+  <header>
+    <div>
+      <h1><a href="{% url "index-list" %}">Home</a></h1>
+    </div>
+  </header>
+  <h1 id="h1-family">Relatives</h1>
+  <ul>
+    {% for person in relatives %}
+    <li>{{person}}</li>
+    {% endfor %}
+  </ul>
+{% endblock body %}

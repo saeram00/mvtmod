@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+{% block body %}
+  <header>
+    <div>
+      <h1>Welcome to my first MVT!</h1>
+      <h2>This is part of a CoderHouse challenge.</h2>
+    </div>
+  </header>
+  <div>
+    <p>Please select the app you'd like to see:</p>
+    <ul>
+      <li><a href="{% url "family-tree" %}">Family app</a></li>
+    </ul>
+  </div>
+{% endblock body %}
