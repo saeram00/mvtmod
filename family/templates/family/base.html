@@ -1,14 +1,12 @@
 {% extends "home/base.html" %}
-{% block body %}
-  <header>
-    <div>
-      <h1><a href="{% url "index-list" %}">Home</a></h1>
-    </div>
-  </header>
-  <h2 id="h2-family">Familiares</h2>
-  <ul>
-    {% for person in relatives %}
-    <li>{{person}}</li>
-    {% endfor %}
+{% block h1_header %}
+  <h1>Familiares</h1>
+  {% for person in relatives %}
+  <ul class="list-inline">
+    <li class="list-inline-item">Nombre: {{person.name}}</li>
+    <li class="list-inline-item">Edad: {{person.age}}</li>
+    <li class="list-inline-item">Nacimiento: {{person.birth}}</li>
+    <li class="list-inline-item">Ocupaci&oacute;n: {{person.job}}</li>
   </ul>
-{% endblock body %}
+  {% endfor %}
+{% endblock h1_header %}

@@ -1,16 +1,22 @@
 {% extends "home/base.html" %}
-{% block body %}
+{% block h1_header %}
   <header>
     <div>
       <h1>¡Bienvenido a este MVT!</h1>
-      <h2>Esto es parte del desaf&iacuteo de CoderHouse.</h2>
     </div>
   </header>
-  <div>
-    <p>Seleccione la secci&oacuten que desea ver:</p>
-    <ul>
-      <li><a href="{% url "family-tree" %}">Familiares</a></li>
-      <li><a target="blank" href="https://static.boredpanda.com/blog/wp-content/uploads/2015/05/funny-dog-animal-video-corgis-running-slow-motion-1.gif"><strong>???</strong></a></li>
-    </ul>
-  </div>
-{% endblock body %}
+{% endblock h1_header %}
+{% block index_list %}
+    <!-- Index Grid-->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <h3>Seleccione la secci&oacute;n que desea ver:</h3>
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item"><a href="{% url "family-tree" %}">Familiares</a></li>
+            <li class="list-inline-item"><a target="blank" href="https://static.boredpanda.com/blog/wp-content/uploads/2015/05/funny-dog-animal-video-corgis-running-slow-motion-1.gif"><strong>???</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+{% endblock index_list %}
