@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Relative
 from .forms import RelativeForm
 
@@ -23,7 +23,7 @@ def fam_input(request):
                                job=info['ocupacion']
                                )
             new_rel.save()
-            return render(request, 'family/base.html') # Te envía a una página escogida al enviar el form
+            return redirect('family-tree') # Te envía a una página escogida al enviar el form
     else:
         rel_form = RelativeForm() # Form vacío al cargar el HTML
 
