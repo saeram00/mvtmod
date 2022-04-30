@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+{% block h1_header %}
+    <h1>Ingrese los campos que desea editar</h1>
+    {% if rel_form.errors %}
+    <p>Datos mal ingresados. Revise por favor.</p>
+    {% endif %}
+    <form action="" method="POST">
+      {% csrf_token %}
+      <table>{{rel_form.as_table}}</table>
+    </form>
+    <input type="submit" value="Enviar">
+{% endblock h1_header %}
