@@ -44,7 +44,7 @@ def fam_edit(request):
                                job=info['ocupacion']
                                )
             new_rel.save()
-            return render(request, 'family/base.html') # Te envía a una página escogida al enviar el form
+            return redirect('family-tree') # Te envía a una página escogida al enviar el form
     else:
         rel_form = RelativeForm() # Form vacío al cargar el HTML
 
@@ -65,7 +65,7 @@ def fam_delete(request):
                                job=info['ocupacion']
                                )
             new_rel.save()
-            return render(request, 'family/base.html') # Te envía a una página escogida al enviar el form
+            return redirect('family-tree') # Te envía a una página escogida al enviar el form
     else:
         rel_form = RelativeForm() # Form vacío al cargar el HTML
 
