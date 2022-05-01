@@ -33,6 +33,14 @@ def fam_input(request):
 
     return render(request, 'family/fam_input.html', fam_input_context)
 
+def search(request):
+    if request.GET.get('name'):
+        name = request.GET.get('name')
+        fam_search = Relative.objects.filter(name__icontains=name)
+        return render(request, 'family/results.html', {'results': fam_search})
+
+    return render(request, 'family/search.html')
+
 def fam_edit(request):
     if request.method == 'POST':
         rel_form = RelativeForm(request.POST) # Llega la info del HTML
