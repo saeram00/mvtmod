@@ -7,7 +7,9 @@
       <li>{{rel}}</li>
     </ol>
     {% endfor %}
+    <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
     {% else %}
     <h1>Resultados no encontrados</h1>
+    <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
     {% endif %}
 {% endblock h1_header %}

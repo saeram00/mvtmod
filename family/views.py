@@ -34,8 +34,8 @@ def fam_input(request):
     return render(request, 'family/fam_input.html', fam_input_context)
 
 def search(request):
-    if request.GET.get('name'):
-        name = request.GET.get('name')
+    if request.GET.get('query-name'):
+        name = request.GET.get('query-name')
         fam_search = Relative.objects.filter(name__icontains=name)
         return render(request, 'family/results.html', {'results': fam_search})
 
