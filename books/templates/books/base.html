@@ -1,12 +1,13 @@
 {% extends "home/base.html" %}
 {% block h1_header %}
-  <h1>Familiares</h1>
-  {% for person in relatives %}
+  <h1>Libros</h1>
+  {% for book in books %}
   <ul class="list-inline">
-    <li class="list-inline-item">Nombre: {{person.name}}</li>
-    <li class="list-inline-item">Edad: {{person.age}}</li>
-    <li class="list-inline-item">Nacimiento: {{person.birth}}</li>
-    <li class="list-inline-item">Ocupaci&oacute;n: {{person.job}}</li>
+    <li class="list-inline-item">T&iacute;tulo: {{book.book_title}}</li>
+    <li class="list-inline-item">Autor: {{book.author}}</li>
+    <li class="list-inline-item">G&eacute;nero: {{book.genre}}</li>
+    <li class="list-inline-item">Fecha de publicaci&oacute;n: {{book.published}}</li>
+    <li class="list-inline-item">Duraci&oacute;n: {{book.book_length}}</li>
   </ul>
   {% endfor %}
 {% endblock h1_header %}
