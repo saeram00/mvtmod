@@ -41,4 +41,4 @@ def search(request):
                       {'results': bk_search, 'title': 'Libros'}
                       )
 
-    return render(request, 'books/search.html', {'title': 'libros'})
+    return render(request, 'books/search.html', {'title': 'Libros'})

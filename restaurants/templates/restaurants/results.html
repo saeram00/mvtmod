@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+{% block h1_header %}
+    {% if results %}
+    <h1>Resultados</h1>
+    {% for resto in results %}
+    <ol>
+      <li>{{resto}}</li>
+    </ol>
+    {% endfor %}
+    <div class="col-auto"><a href="{% url "restaurants-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
+    {% else %}
+    <h1>No hay resultados que coincidan con la b&uacute;squeda</h1>
+    <div class="col-auto"><a href="{% url "restaurants-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
+    {% endif %}
+{% endblock h1_header %}

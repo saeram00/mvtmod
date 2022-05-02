@@ -3,9 +3,9 @@
     {% if results %}
     <h1>Resultados</h1>
     {% for rel in results %}
-    <ol>
+    <ul>
       <li>{{rel}}</li>
-    </ol>
+    </ul>
     {% endfor %}
     <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
     {% else %}

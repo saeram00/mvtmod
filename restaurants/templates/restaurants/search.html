@@ -1,9 +1,9 @@
 {% extends "home/base.html" %}
 {% block h1_header %}
-    <h1>Ingrese el nombre del profesional que busca</h1>
+    <h1>Ingrese el nombre del restaurante que busca</h1>
     <form action="" method="GET">
       {% csrf_token %}
-      <input type="text" placeholder="Nombre" name="query-name">
+      <input type="text" placeholder="Nombre" name="query-resto">
       <input type="submit" value="Buscar">
     </form>
 {% endblock h1_header %}

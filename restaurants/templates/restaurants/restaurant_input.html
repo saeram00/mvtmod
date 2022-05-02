@@ -1,11 +1,11 @@
 {% extends "home/base.html" %}
 {% block h1_header %}
-    <h1>Ingrese los datos del nuevo profesional</h1>
+    <h1>Ingrese los datos del nuevo restaurante</h1>
     <form action="" method="POST">
       {% csrf_token %}
-      <table>{{rel_form.as_table}}</table>
+      <table>{{restaurant_form.as_table}}</table>
       <input type="submit" value="Enviar">
-      {% if rel_form.errors %}
+      {% if restaurant_form.errors %}
       <p>Datos mal ingresados. Revise por favor.</p>
       {% endif %}
     </form>

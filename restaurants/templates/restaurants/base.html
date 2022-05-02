@@ -1,12 +1,12 @@
 {% extends "home/base.html" %}
 {% block h1_header %}
-  <h1>Profesionales</h1>
-  {% for person in relatives %}
+  <h1>Restaurants</h1>
+  {% for resto in restaurants %}
   <ul class="list-inline">
-    <li class="list-inline-item">Nombre: {{person.name}}</li>
-    <li class="list-inline-item">Edad: {{person.age}}</li>
-    <li class="list-inline-item">Nacimiento: {{person.birth}}</li>
-    <li class="list-inline-item">Ocupaci&oacute;n: {{person.job}}</li>
+    <li class="list-inline-item">Nombre: {{resto.resto_name}}</li>
+    <li class="list-inline-item">Categor&iacute;a: {{resto.category}}</li>
+    <li class="list-inline-item">Clasificaci&oacute;n: {{resto.stars}} estrellas</li>
+    <li class="list-inline-item">Permite reservas: {{resto.reservation}}</li>
   </ul>
   {% endfor %}
 {% endblock h1_header %}
@@ -19,8 +19,8 @@
             <h2 class="mb-4">¿Qu&eacute; acci&oacute;n desea realizar?</h2>
             <!-- Form access buttons -->
             <div class="row justify-content-center">
-              <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Buscar</button></a></div>
-              <div class="col-auto"><a href="{% url "family-input" %}"><button class="btn btn-primary btn-lg" id="submitButton">Agregar</button></a></div>
+              <div class="col-auto"><a href="{% url "restaurants-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Buscar</button></a></div>
+              <div class="col-auto"><a href="{% url "restaurants-input" %}"><button class="btn btn-primary btn-lg" id="submitButton">Agregar</button></a></div>
               <!-- <div class="col-auto"><a href=""><button class="btn btn-primary btn-lg" id="submitButton">Editar</button></a></div> -->
               <!-- <div class="col-auto"><a href=""><button class="btn btn-primary btn-lg" id="submitButton">Borrar</button></a></div> -->
             </div>
