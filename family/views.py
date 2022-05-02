@@ -28,6 +28,7 @@ def fam_input(request):
         rel_form = RelativeForm() # Form vacío al cargar el HTML
 
     fam_input_context = {
+        'title': 'Family',
         'rel_form': rel_form,
     }
 
@@ -37,9 +38,11 @@ def search(request):
     if request.GET.get('query-name'):
         name = request.GET.get('query-name')
         fam_search = Relative.objects.filter(name__icontains=name)
-        return render(request, 'family/results.html', {'results': fam_search})
+        return render(request, 'family/results.html',
+                      {'results': fam_search, 'title': 'Family'}
+                      )
 
-    return render(request, 'family/search.html')
+    return render(request, 'family/search.html', {'title': 'Family'})
 
 def fam_edit(request):
     if request.method == 'POST':

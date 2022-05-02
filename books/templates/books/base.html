@@ -7,7 +7,7 @@
     <li class="list-inline-item">Autor: {{book.author}}</li>
     <li class="list-inline-item">G&eacute;nero: {{book.genre}}</li>
     <li class="list-inline-item">Fecha de publicaci&oacute;n: {{book.published}}</li>
-    <li class="list-inline-item">Duraci&oacute;n: {{book.book_length}}</li>
+    <li class="list-inline-item">Duraci&oacute;n: {{book.book_length}} p&aacute;ginas</li>
   </ul>
   {% endfor %}
 {% endblock h1_header %}
@@ -20,8 +20,8 @@
             <h2 class="mb-4">¿Qu&eacute; acci&oacute;n desea realizar?</h2>
             <!-- Form access buttons -->
             <div class="row justify-content-center">
-              <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Buscar</button></a></div>
-              <div class="col-auto"><a href="{% url "family-input" %}"><button class="btn btn-primary btn-lg" id="submitButton">Agregar</button></a></div>
+              <div class="col-auto"><a href="{% url "books-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Buscar</button></a></div>
+              <div class="col-auto"><a href="{% url "books-input" %}"><button class="btn btn-primary btn-lg" id="submitButton">Agregar</button></a></div>
               <!-- <div class="col-auto"><a href=""><button class="btn btn-primary btn-lg" id="submitButton">Editar</button></a></div> -->
               <!-- <div class="col-auto"><a href=""><button class="btn btn-primary btn-lg" id="submitButton">Borrar</button></a></div> -->
             </div>

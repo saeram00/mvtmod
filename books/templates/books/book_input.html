@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+{% block h1_header %}
+    <h1>Ingrese los datos del nuevo libro</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <table>{{book_form.as_table}}</table>
+      <input type="submit" value="Enviar">
+      {% if book_form.errors %}
+      <p>Datos mal ingresados. Revise por favor.</p>
+      {% endif %}
+    </form>
+{% endblock h1_header %}

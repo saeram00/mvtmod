@@ -2,14 +2,14 @@
 {% block h1_header %}
     {% if results %}
     <h1>Resultados</h1>
-    {% for rel in results %}
+    {% for book in results %}
     <ol>
-      <li>{{rel}}</li>
+      <li>{{book}}</li>
     </ol>
     {% endfor %}
-    <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
+    <div class="col-auto"><a href="{% url "books-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
     {% else %}
     <h1>No hay resultados que coincidan con la b&uacute;squeda</h1>
-    <div class="col-auto"><a href="{% url "fam-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
+    <div class="col-auto"><a href="{% url "books-search" %}"><button class="btn btn-primary btn-lg" id="submitButton">Volver</button></a></div>
     {% endif %}
 {% endblock h1_header %}
