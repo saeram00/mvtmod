@@ -1,4 +1,4 @@
-# CoderHouse Django Primera Entre Proyecto Final
+# CoderHouse Django Primera Entrega Proyecto Final
 
 ## Ampliación del proyecto MVT
 
